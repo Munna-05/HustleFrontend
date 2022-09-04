@@ -1,0 +1,11 @@
+.span{
+    cursor: pointer;
+}
+
+.paper{
+    background-color: whitesmoke;
+    
+    /* background-image: url(https://designpress.com/wp-content/uploads/2011/05/white-backgrounds/paper-background.jpg);
+    background-size: auto;
+    filter: brightness(85%); */
+}
