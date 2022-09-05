@@ -11,13 +11,13 @@ const AdminPage = () =>{
     })
 
     return(
-        < >
+        < div className="bg-gradient-to-b from-blue-100 to-blue-300">
         <Navbar/>
         <div className="h-full pb-10">
         <AdminDash/>
             
         </div>
-        </>
+        </div >
     )
 }
 export default AdminPage;

@@ -28,7 +28,7 @@ const Navbar = () => {
 
 
     return (
-        <div className='w-screen'>
+        <div className='w-screen mt-0'>
             
               <ToastContainer
                 autoClose={2000}
@@ -36,8 +36,8 @@ const Navbar = () => {
 
             />
 
-            <div class="bg-none dark:border-gray-600 container mx-auto "  >
-                <div class="container bg-slate-300 bg-opacity-10 bg-clipping-padding flex fixed flex-wrap justify-between items-center" style={{ backdropFilter: "blur(20px)" , width:'100%'}}>
+            <div class="bg-none dark:border-gray-600 mt-0 container  mx-auto "  >
+                <div class="container bg-slate-300 bg-opacity-0 bg-clipping-padding flex flex-wrap justify-between items-center" style={{ backdropFilter: "blur(20px)" , width:'100%'}}>
                     <a class="flex items-center">
                         {/* <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo"> */}
                       <Link to='/'>
@@ -78,7 +78,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-                        <div className='h-10'></div>
+                       
         </div>
     )
 }

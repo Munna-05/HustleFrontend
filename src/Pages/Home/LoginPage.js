@@ -17,12 +17,13 @@ const LoginPage = () => {
 
  })
   return (
-    <motion.div initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
+    <motion.div className='bg-gradient-to-b from-blue-100 to-blue-300' initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
         <Navbar />
-        <div className='h-20'>
+        
+      <div className='mt-10'>
 
-        </div>
         <Login />
+      </div>
     </motion.div>
 
   )

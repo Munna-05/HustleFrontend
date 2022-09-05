@@ -5,7 +5,7 @@ import {motion} from 'framer-motion'
 
 export const AboutPage = () => {
     return (
-        <motion.div className='height' initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
+        <motion.div className='height bg-gradient-to-b from-blue-100 to-blue-300' initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
             <div className=''>
                 <Navbar />
             </div>
@@ -14,7 +14,7 @@ export const AboutPage = () => {
             <div className="flex justify-center">
                    
                 
-            <div className='bg-slate-300  flex p-5 grid-rows-1 p-12 rounded-lg shadow shadow-slate-500 shadow-lg w-1/2 text-center  '>
+            <div className=' bg-gradient-to-r from-slate-300 via-slate-100 to-slate-300  flex p-5 grid-rows-1 p-12 rounded-lg shadow shadow-slate-500 shadow-lg w-1/2 text-center  '>
                    <div className=''>
                   We are introducing a new Social Media platform exclusively for the Youtube Content Creators.Here you can Sign up and get a insight about you and 
                   your fellow content creators and their work so you can see how many of them are <span className='text-bold font-bold uppercase mx-1'>Hustling</span> to 

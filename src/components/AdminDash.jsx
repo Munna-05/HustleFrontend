@@ -19,7 +19,7 @@ const AdminDash = () => {
 
     }
     useEffect(() => {
-        axios.get('https://hustbackend.herokuapp.com/auth/adminDash').then((response) => {
+        axios.get('http://localhost:5001/auth/adminDash').then((response) => {
             console.log(response)
             console.log(response.data.channel)
             // console.lof(response.data.user)

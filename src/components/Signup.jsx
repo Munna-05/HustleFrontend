@@ -69,7 +69,7 @@ export const Signup = () => {
 
         if (error == false) {
             console.log(username, password, email)
-            axios.post('https://hustbackend.herokuapp.com/auth/signup', data).then((response) => {
+            axios.post('http://localhost:5001/auth/signup', data).then((response) => {
                 console.log(response.data)
                 if (response.data == "invalid credentials") {
                     toast.error('Check Credentials', { position: toast.POSITION.BOTTOM_CENTER })

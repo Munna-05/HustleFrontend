@@ -28,7 +28,7 @@ export const ProfilePage = () => {
         
         setTimeout(() => {
             setSkeleton(false)
-        }, 2000);
+        },1500);
         if(response.data.channelTitle==""){
 
         }else{
@@ -45,10 +45,10 @@ export const ProfilePage = () => {
     },[name,desc,subs])
   return (
 
-    <motion.div className='h-screen' initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
+    <motion.div className='h-screen bg-slate-300' initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
         <div className='fixed z-10 '>< Navbar/></div>
-        {/* <div className='h-10'></div> */}
-        <div>
+       
+        <div className=''>
             {skeleton?<div className=''><PageSkeleton/></div>:
             <Profile title={name} description={desc} subscribers={subs} dp={dp} channelId={channel_id} videos={videos} userid={userid}/>
   }

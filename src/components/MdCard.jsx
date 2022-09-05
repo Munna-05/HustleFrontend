@@ -5,7 +5,7 @@ export const MdCard = (props) => {
     return (
         <div>
             <div className='row flex px-0 justify-center'>
-                <div class="container border  hover:scale-105 bg-slate-300 hover:bg-slate-200 hover:transition duration-700 ease-in-out m-5 rounded-xl overflow-hidden shadow-slate-900 shadow-lg hover:shadow-md">
+                <div class="container border  hover:scale-105 bg-gradient-to-r from-slate-300 to-slate-100 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-100 hover:transition hover:duration-500 ease-in-out m-5 rounded-xl overflow-hidden shadow-slate-900 shadow-lg hover:shadow-md">
 
                     <div class="px-6 py-4 flex justify-center">
                         <div>

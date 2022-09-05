@@ -9,7 +9,7 @@ export const Card = (props) => {
     return (
         <div className=''>
             <div className=' flex justify-center'>
-                <div class="max-w-xxl border duration-500 hover:scale-105 bg-slate-300 hover:bg-slate-200 hover:transition duration-700 ease-in-out m-4 rounded-xl overflow-hidden shadow-slate-900 shadow-lg hover:shadow-md">
+                <div class="max-w-xxl border duration-500 hover:scale-105 bg-gradient-to-r from-slate-300 to-slate-100 hover:bg-slate-200 hover:transition duration-700 ease-in-out m-4 rounded-xl overflow-hidden shadow-slate-900 shadow-lg hover:shadow-md">
 
                     <div class="px-6 py-4 h-auto flex">
                         <div>

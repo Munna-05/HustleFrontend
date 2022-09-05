@@ -22,7 +22,7 @@ const Home = () => {
     const youtubeApiKey = 'AIzaSyC87sI8sEK3S7YP9smCG1EhWihdUh4fJCs'
     const url = 'https://www.googleapis.com/youtube/v3'
     useEffect(() => {
-        axios.get("https://hustbackend.herokuapp.com/auth/youtube").then((response) => {
+        axios.get("http://localhost:5001/auth/youtube").then((response) => {
             console.log(response.data)
             const array = response.data
             // console.log(response.data[1])
@@ -53,13 +53,14 @@ const Home = () => {
 
 
     return (
-        <motion.div className='h-full' style={{ backgroundrepeat: 'no-repeat' }} initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
-            <motion.div className=''initial={{ opacity: 0 }} animate={{ opacity: 1 , duration:'0.5s' }} exit={{ opacity: 0 }}>
+        <motion.div className='h-full bg-no-repeat bg-gradient-to-b from-blue-100  to-blue-200' style={{ backgroundrepeat: 'no-repeat' }} initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
+           
+           
+            <motion.div className='mt-0 mb-10'initial={{ opacity: 0 }} animate={{ opacity: 1 , duration:'0.5s' }} exit={{ opacity: 0 }}>
                 <Navbar />
             </motion.div>
-            <motion.div className=''initial={{ width: 0 ,duration:'1s'}} animate={{ width: '100%' , duration:'2s' }} exit={{ x: window.innerWidth ,duration:'1s'}}>
-
-            </motion.div>
+         
+           
             <motion.div className='mt-10' initial={{ width: 0 ,duration:'1s'}} animate={{ width: '100%' , duration:'2s' }} exit={{ x: window.innerWidth ,duration:'1s'}}>
                 {data.slice(0, 1).map((details) => {
                     return (
@@ -70,7 +71,7 @@ const Home = () => {
                     )
 
                 })}
-                <div className='grid grid-cols-2'>
+                <div className='grid md:  sm:duration-500 md:duration-500 lg:grid-cols-2  md:grid-cols-2 sm:grid-cols-1'>
                     {data.slice(1, 3).map((detail) => {
                         return (
                             <div className='duration-500'>
@@ -81,7 +82,7 @@ const Home = () => {
                         )
                     })}
                 </div>
-                <div className='grid grid-cols-3 gap-0'>
+                <div className='grid md:  sm:duration-500 md:duration-500 lg:grid-cols-3  md:grid-cols-3 sm:grid-cols-1'>
                     {data.slice(3).map((detail) => {
                         return (
                             <div className='duration-500'>

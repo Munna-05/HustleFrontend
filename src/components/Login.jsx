@@ -19,7 +19,7 @@ export const Login = () => {
     const [passErr, setPassErr] = useState("")
     const [backendmsg, setBackendmsg] = useState('')
     const navigate = useNavigate()
-    const url = 'https://hustbackend.herokuapp.com/auth/'
+    const url = 'http://localhost:5001/auth/'
     const dispatch = useDispatch()
 
     const notify = () => {

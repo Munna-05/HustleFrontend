@@ -6,10 +6,10 @@ import AdminLog from '../../components/AdminLog'
 
 const AdminLogin = () => {
     return (
-        <>
+        <div className='bg-gradient-to-b from-blue-100 to-blue-300'>
         <Navbar/>
         <AdminLog/>
-        </>
+        </div>
 
     )
 }
