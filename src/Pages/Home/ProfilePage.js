@@ -27,7 +27,7 @@ export const ProfilePage = () => {
             
         
         setTimeout(() => {
-            setSkeleton(false)
+            // setSkeleton(false)
         },1500);
         if(response.data.channelTitle==""){
 

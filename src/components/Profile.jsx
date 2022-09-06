@@ -37,7 +37,13 @@ export const Profile = (props) => {
                             {data.slice(0, 1).map((image) => {
                                 return (
                                     <>
-                                        <img src={image.snippet.thumbnails.high.url} style={{width:"100%" ,position:'relative', top:'-250px'}} alt="" />
+
+                                        <motion.div animate={{ x: 100 }}
+                                            transition={{ type: "spring", stiffness: 100 }}>
+
+                                        <img src={image.snippet.thumbnails.high.url} style={{ width: "100%", position: 'relative', top: '-250px' }} alt="" />
+                                        </motion.div>
+
                                     </>
                                 )
                             })}

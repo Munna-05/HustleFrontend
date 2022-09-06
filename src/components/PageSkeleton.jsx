@@ -103,7 +103,7 @@ const PageSkeleton = () => {
                                     </div>
                                     <div className=' flex justify-center'>
 
-                                        <img src="https://www.pngkey.com/png/detail/114-1149847_avatar-unknown-dp.png" className='w-60 hover:scale-105 duration-700 rounded-full ' alt="" /> 
+                                        <img src="https://toppng.com/uploads/preview/avatar-png-11554021819gij72acuim.png" className='w-60 h-30 grayscale hover:scale-105 duration-700 rounded-full ' alt="" /> 
                                     </div>
                                     <div className=" mt-12">
                                         <h3 className="text-4xl animate-pulse font-semibold leading-normal mb-2 text-gray-800 mb-2">

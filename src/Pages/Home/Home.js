@@ -31,7 +31,7 @@ const Home = () => {
             setSkeleton(false)
         }, 1500);
         if (response.data[0].channelTitle === "") {
-            
+            setSkeleton(true)
         } else {
             setData(array)
             setSkeleton(true)
