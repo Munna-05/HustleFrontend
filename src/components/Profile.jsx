@@ -15,7 +15,7 @@ export const Profile = (props) => {
     useEffect(() => {
         console.log("channel id =", props.channelId)
         let chID = props.channelId
-        axios.get(`https://hustbackend.herokuapp.com/auth/channelVideos/${chID}`).then((response) => {
+        axios.get(`http://localhost:5001/auth/channelVideos/${chID}`).then((response) => {
             console.log("profile element useEffect :", response)
             console.log("response videos ", response.data.videos)
             setData(response.data.videos)
@@ -31,7 +31,7 @@ export const Profile = (props) => {
                 <main className="profile-page h-fit">
                     <section className="relative block" style={{ height: "500px" }}>
                         <div
-                            className="w-full blur-sm h-full bg-center overflow-hidden bg-cover"
+                            className="w-screen blur-sm h-full bg-center overflow-hidden "
 
                         >
                             {data.slice(0, 1).map((image) => {
@@ -41,7 +41,7 @@ export const Profile = (props) => {
                                         <motion.div animate={{ x: 100 }}
                                             transition={{ type: "spring", stiffness: 100 }}>
 
-                                        <img src={image.snippet.thumbnails.high.url} style={{ width: "100%", position: 'relative', top: '-250px' }} alt="" />
+                                        <img src={image.snippet.thumbnails.high.url} style={{ width: "100%", position: 'relative', top: '-250px' , left:"-100px"}} alt="" />
                                         </motion.div>
 
                                     </>

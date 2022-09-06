@@ -14,7 +14,7 @@ export const ProfilePage = () => {
     const [desc, setDesc] = useState('')
     const [subs, setSubs] = useState('')
     const [userid,setUserid] = useState('')
-    const [skeleton,setSkeleton]=useState(true)
+    const [skeleton,setSkeleton]=useState(false)
     const [dp,setDp] = useState('')
     const [channel_id,setChannel_id]=useState('')
     const [videos,setVideos]=useState([])
@@ -22,13 +22,13 @@ export const ProfilePage = () => {
     useEffect(()=>{
         console.log(id)
       
-        axios.get(`https://hustbackend.herokuapp.com/auth/profile/${id}`).then((response)=>{
+        axios.get(`http://localhost:5001/auth/profile/${id}`).then((response)=>{
             console.log(response)
             
         
         setTimeout(() => {
-            // setSkeleton(false)
-        },1500);
+            setSkeleton(false)
+        },2000);
         if(response.data.channelTitle==""){
 
         }else{
