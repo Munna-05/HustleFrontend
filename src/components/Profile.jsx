@@ -15,7 +15,7 @@ export const Profile = (props) => {
     useEffect(() => {
         console.log("channel id =", props.channelId)
         let chID = props.channelId
-        axios.get(`http://localhost:5001/auth/channelVideos/${chID}`).then((response) => {
+        axios.get(`https://hustbackend.herokuapp.com/auth/channelVideos/${chID}`).then((response) => {
             console.log("profile element useEffect :", response)
             console.log("response videos ", response.data.videos)
             setData(response.data.videos)

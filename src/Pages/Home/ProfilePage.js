@@ -22,7 +22,7 @@ export const ProfilePage = () => {
     useEffect(()=>{
         console.log(id)
       
-        axios.get(`http://localhost:5001/auth/profile/${id}`).then((response)=>{
+        axios.get(`https://hustbackend.herokuapp.com/auth/profile/${id}`).then((response)=>{
             console.log(response)
             
         

@@ -22,7 +22,7 @@ const Home = () => {
     const youtubeApiKey = 'AIzaSyC87sI8sEK3S7YP9smCG1EhWihdUh4fJCs'
     const url = 'https://www.googleapis.com/youtube/v3'
     useEffect(() => {
-        axios.get("http://localhost:5001/auth/youtube").then((response) => {
+        axios.get("https://hustbackend.herokuapp.com/auth/youtube").then((response) => {
             console.log(response.data)
             const array = response.data
             // console.log(response.data[1])
