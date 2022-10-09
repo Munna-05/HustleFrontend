@@ -1,9 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const PageSkeleton = () => {
+const  PageSkeleton = () => {
     return (
-        <motion.div className=' bg-none overlow-hidden animate-pulse' style={{height:'30vh',width:"100%"}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opcaity: 0 }} >
+        <motion.div className=' bg-none overlow-hidden animate-pulse' style={{height:'30vh',width:"100%"}} initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ width:0 }} >
            <div className=''>
                 <main className="profile-page h-fit">
                     <section className="relative block" style={{ height: "500px" }}>

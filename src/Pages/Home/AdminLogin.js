@@ -6,7 +6,7 @@ import AdminLog from '../../components/AdminLog'
 
 const AdminLogin = () => {
     return (
-        <div className='bg-gradient-to-b from-blue-100 to-blue-300'>
+        <div className='bg-no-repeat bg-gradient-to-b from-blue-100  to-slate-200'>
         <Navbar/>
         <AdminLog/>
         </div>

@@ -29,7 +29,7 @@ const Home = () => {
 
         setTimeout(() => {
             setSkeleton(false)
-        }, 1500);
+        }, 1000);
         if (response.data[0].channelTitle === "") {
             setSkeleton(true)
         } else {
@@ -53,15 +53,15 @@ const Home = () => {
 
 
     return (
-        <motion.div className='h-full bg-no-repeat bg-gradient-to-b from-blue-100  to-blue-200' style={{ backgroundrepeat: 'no-repeat' }} initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
+        <motion.div className='h-full bg-no-repeat bg-gradient-to-b from-blue-100  to-slate-200' style={{ backgroundrepeat: 'no-repeat' }} >
            
            
-            <motion.div className='mt-0 mb-10'initial={{ opacity: 0 }} animate={{ opacity: 1 , duration:'0.5s' }} exit={{ opacity: 0 }}>
+            <motion.div className='mt-0 mb-10'>
                 <Navbar />
             </motion.div>
          
            
-            <motion.div className='mt-10' initial={{ width: 0 ,duration:'1s'}} animate={{ width: '100%' , duration:'2s' }} exit={{ x: window.innerWidth ,duration:'1s'}}>
+            <motion.div className='mt-10' initial={{ width: 0 ,duration:'1s'}} animate={{ width: '100%' , duration:'2s' }} exit={{ x: window.innerWidth ,duration:'1s',opacity:1}}>
                 {data.slice(0, 1).map((details) => {
                     return (
 

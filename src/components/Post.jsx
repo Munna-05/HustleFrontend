@@ -7,8 +7,9 @@ const Post = (props) => {
             <div className='border border-white rounded-lg h-full p-2 bg-slate-400'>
                 <div className='border border-white h-fit'>
 
-                    <div className='flex justify-start' style={{}}>
-                        <img className='h-12 border w-12 m-2 rounded-full' src={props.dp} alt="" /><span className='mx-3 my-auto'>{props.title}</span>
+                    <div className='flex justify-start' >
+                        
+                        <img className='h-12 border w-12 m-2 rounded-full' src={props.img} alt="" /><span className='mx-3 my-auto'>{props.name}</span>
                     </div>
 
                     <div className='post ' style={{ height: 'auto' }}>

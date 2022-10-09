@@ -5,7 +5,7 @@ import {motion} from 'framer-motion'
 
 export const AboutPage = () => {
     return (
-        <motion.div className='height bg-gradient-to-b from-blue-100 to-blue-300' initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
+        <motion.div className='height bg-no-repeat bg-gradient-to-b from-blue-100  to-slate-200' initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
             <div className=''>
                 <Navbar />
             </div>

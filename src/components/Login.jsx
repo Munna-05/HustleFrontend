@@ -10,6 +10,7 @@ import { login } from '../redux/features/userSlice'
 import { useEffect } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import {motion} from 'framer-motion'
 
 export const Login = () => {
     const [email, setEmail] = useState('')
@@ -87,7 +88,7 @@ export const Login = () => {
 
 
     return (
-        <div className='justify-center h-screen flex'>
+        <motion.div className='justify-center h-screen flex'>
             <ToastContainer
                 autoClose={2000}
                 hideProgressBar={false}
@@ -166,6 +167,6 @@ export const Login = () => {
 
 
 
-        </div>
+        </motion.div>
     )
 }

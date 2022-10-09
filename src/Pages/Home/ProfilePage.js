@@ -23,15 +23,17 @@ export const ProfilePage = () => {
         console.log(id)
       
         axios.get(`http://localhost:5001/auth/profile/${id}`).then((response)=>{
-            console.log(response)
+            console.log(response.data)
             
         
         setTimeout(() => {
             setSkeleton(false)
-        },2000);
+            console.log(skeleton)
+        },1500);
         if(response.data.channelTitle==""){
 
         }else{
+            console.log(skeleton)
             setSkeleton(true)
             setChannel_id(response.data.profileDetails.channelId)
             setName(response.data.profileDetails.channelTitle)
@@ -45,8 +47,8 @@ export const ProfilePage = () => {
     },[name,desc,subs])
   return (
 
-    <motion.div className='h-screen bg-slate-300' initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
-        <div className='fixed z-10 '>< Navbar/></div>
+    <motion.div className='h-screen bg-slate-300' >
+        <div className='fixed w-full z-10 '>< Navbar/></div>
        
         <div className=''>
             {skeleton?<div className=''><PageSkeleton/></div>:

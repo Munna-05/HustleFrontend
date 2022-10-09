@@ -13,17 +13,19 @@ const LoginPage = () => {
     let token = localStorage.getItem("token")
     if(token){
      navigate('/')
+    }else{
+     
     }
 
- })
+ },[])
   return (
-    <motion.div className='bg-gradient-to-b from-blue-100 to-blue-300' initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth }}>
+    <motion.div className='bg-no-repeat bg-gradient-to-b from-blue-100  to-slate-200' >
         <Navbar />
         
-      <div className='mt-10'>
+      <motion.div className='mt-10'initial={{ width: 0 }} animate={{ width: '100%'  }} exit={{ x: window.innerWidth}}>
 
         <Login />
-      </div>
+      </motion.div>
     </motion.div>
 
   )

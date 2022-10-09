@@ -12,6 +12,10 @@ import {ProfilePage} from './Pages/Home/ProfilePage'
 import AdminLogin from './Pages/Home/AdminLogin';
 import AdminPage from './Pages/Home/AdminPage';
 import AnimatedRoutes from './components/AnimatedRoutes';
+import io from 'socket.io-client'
+
+// const socket = io.connect('http://localhost:5001/')
+
 
 function App() {
 

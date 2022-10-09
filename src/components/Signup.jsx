@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import './signUp.css'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { motion } from 'framer-motion'
 
 export const Signup = () => {
     const [username, setusername] = useState('')
@@ -13,11 +14,15 @@ export const Signup = () => {
     const [confirmPass, setConfirmPass] = useState('')
     const [nameError, setNameErr] = useState('')
     const [emailErr, setEmailErr] = useState('')
-    const [channel,setChannel] = useState('')
+    const [channel, setChannel] = useState('')
+    const [upi, setUpi] = useState('')
     const [passErr, setPassErr] = useState('')
     const [rpassErr, setRpassErr] = useState('')
     const [error, setError] = useState(false)
     const [bError, setBerror] = useState('')
+    const [country, setCountry] = useState('enter country')
+    const [state, setState] = useState('enter state')
+    const [about, setAbout] = useState('about you')
     const navigate = useNavigate()
 
     const notify = () => {
@@ -33,8 +38,11 @@ export const Signup = () => {
         const data = {
             name: username,
             email: email,
-            channelName:channel,
+            upi: upi,
+            country: country,
+            state: state,
             password: password,
+            about: about,
             rpass: confirmPass
 
         }
@@ -58,11 +66,11 @@ export const Signup = () => {
             setError(false)
             setEmailErr("")
         }
-        if(data.password != data.rpass){
+        if (data.password != data.rpass) {
             setError(true)
 
-            toast.error('Password is not Matching',{position:toast.POSITION.BOTTOM_CENTER})
-        }else{
+            toast.error('Password is not Matching', { position: toast.POSITION.BOTTOM_CENTER })
+        } else {
             setError(false)
 
         }
@@ -89,7 +97,7 @@ export const Signup = () => {
 
 
     return (
-        <div className='height'>
+        <motion.div className='height' initial={{ width: 0 }} animate={{ width: '100%' }} exit={{ x: window.innerWidth, opacity: 1 }}>
             <ToastContainer
                 autoClose={2000}
                 hideProgressBar={false}
@@ -130,10 +138,10 @@ export const Signup = () => {
                     <input
                         type="text"
                         class="block border border-grey-light w-full p-3 rounded mb-4"
-                        value={channel}
-                        onChange={(e) => setChannel(e.target.value)}
-                        name="channelName"
-                        placeholder="Youtube Channel Name" required />
+                        value={upi}
+                        onChange={(e) => setUpi(e.target.value)}
+                        name="upi"
+                        placeholder="Your UPI id" required />
 
                     <input
                         type="password"
@@ -176,6 +184,6 @@ export const Signup = () => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

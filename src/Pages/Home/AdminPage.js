@@ -11,7 +11,7 @@ const AdminPage = () =>{
     })
 
     return(
-        < div className="bg-gradient-to-b from-blue-100 to-blue-300">
+        < div className="bg-no-repeat bg-gradient-to-b from-blue-100  to-slate-200">
         <Navbar/>
         <div className="h-full pb-10">
         <AdminDash/>
